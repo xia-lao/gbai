@@ -2,10 +2,14 @@
 
 def divide (arg0, arg1):
   ret = -1
-  if arg1 == 0:
-    print("Cannot divide by zero")
-  else:
+  # if arg1 == 0:
+  #   print("Cannot divide by zero")
+  # else:
+  #   ret = arg0 / arg1
+  try:
     ret = arg0 / arg1
+  except ZeroDivisionError:
+    print("Cannot divide by zero")
   return ret
 
   vars = []
@@ -33,14 +37,24 @@ for q in questions:
 def format_string(name, surname, age, city, email, phone_num)
   print (f"""{name} {surname}, {age} years old, living in {city} may be reached by email {email} or phone at {phone_num}""")
 
-format_string(answers[0], answers[1], answers[2], answers[3], answers[4], answers[5])
+format_string(*answers)
+print()
+format_string(name=answers[0], surname=answers[1], age=answers[2], city=answers[3], email=answers[4], phone_num=answers[5])
 
 """
 3. Реализовать функцию my_func(), которая принимает три позиционных аргумента, и возвращает сумму наибольших двух аргументов.
 """
 def my_func (a0, a1, a2):
-  m0 = max(a0, a1)
-  m1 = max(a1, a2)
+a0, a1, a2 = [1, 3, 2]
+  try:
+    b0, b1, b2 = map(int, [a0, a1, a2])
+  except:
+    print("Bad arguments, need digits!")
+  lst = [b0, b1, b2]
+  m0 = max(lst)
+  lst0 = filter(lambda a: a != m0, lst)
+  m1 = max(lst0)
+  # print(m0, m1)
   return m0 + m1
 
 """
