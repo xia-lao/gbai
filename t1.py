@@ -108,8 +108,15 @@ def task_7():
   
   limit = 5
   fg = factorial_generator(limit)
+
   for i in range(limit):
     print (next(fg))
+
+  try:
+    for el in factorial_generator(limit):
+      print(el)
+  except StopIteration:
+    print ("End")
 
 task_2()
 task_3()
