@@ -11,14 +11,14 @@ def q1():
   hs_leftover = uts - (hours * 3600)
   minutes = int(hs_leftover // 60)
   seconds = int(hs_leftover - (minutes * 60))
-  print (f"Current time: {hours}:{minutes}:{seconds}\n")
+  print (f"Current time: {hours:02}:{minutes:02}:{seconds:02}\n")
 
 def q2():
   """ 3 """
   suin = input('Now give me a num: ')
   n0 = int(suin)
-  n1 = int(f"{suin}{suin}")
-  n2 = int(f"{suin}{suin}{suin}")
+  n1 = int(f"{suin*2}")
+  n2 = int(f"{suin*3}")
   snewnum = n0 + n1 + n2
   print(f"User gave {suin}, I return you {snewnum} as sum of {n0}, {n1} and {n2}")
 
@@ -57,8 +57,8 @@ def q5():
     counter = 0
     next_day_result = first_day_results
     while next_day_result <= necessary_distance:
-      next_day_result = next_day_result * 1.1
-      counter = counter + 1
+      next_day_result *= 1.1
+      counter += 1
     print (f"The runner runs fine since day {counter}")
 
 q0()
