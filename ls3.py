@@ -45,7 +45,7 @@ format_string(name=answers[0], surname=answers[1], age=answers[2], city=answers[
 3. Реализовать функцию my_func(), которая принимает три позиционных аргумента, и возвращает сумму наибольших двух аргументов.
 """
 def my_func (a0, a1, a2):
-a0, a1, a2 = [1, 3, 2]
+# a0, a1, a2 = [1, 3, 2]
   try:
     b0, b1, b2 = map(int, [a0, a1, a2])
   except:
