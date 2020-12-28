@@ -89,8 +89,31 @@ def task_6():
   print (lst2)
     
 
-# task_2()
-# task_3()
-# task_4()
-# task_5()
+def task_7():
+  """
+  7. Реализовать генератор с помощью функции с ключевым словом yield, создающим очередное значение. При вызове функции должен создаваться объект-генератор. Функция должна вызываться следующим образом: for el in fact(n). Функция отвечает за получение факториала числа, а в цикле необходимо выводить только первые n чисел, начиная с 1! и до n!.
+  Подсказка: факториал числа n — произведение чисел от 1 до n. Например, факториал четырёх 4! = 1 * 2 * 3 * 4 = 24.
+  """
+  def factorial_generator(limit):
+    if limit > 10:
+      raise ValueError
+    step_counter = 0
+    prev = 1
+    while True:
+      step_counter += 1
+      prev *= step_counter
+      yield (step_counter, prev)
+      if step_counter == limit:
+        raise StopIteration
+  
+  limit = 5
+  fg = factorial_generator(limit)
+  for i in range(limit):
+    print (next(fg))
+
+task_2()
+task_3()
+task_4()
+task_5()
 task_6()
+task_7()
