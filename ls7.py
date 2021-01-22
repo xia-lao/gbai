@@ -152,7 +152,6 @@ def run():
 
   def cell_test():
     cc = Cell(24)
-    print("\n\t1:\n", cc.make_order(6))
     c0 = Cell(10)
     c1 = Cell(13)
     # c2 = c0 - c1 #raises as should
@@ -160,13 +159,14 @@ def run():
     c4 = c0 * c1
     c5 = c4 / c1
 
-    print("\n\t2:\n", c3.make_order(6))
-    print("\n\t3:\n", c4.make_order(13))
-    print("\n\t4:\n", c5.make_order(5))
+    print("\n1:\n", cc.make_order(9))
+    print("\n2:\n", c3.make_order(6))
+    print("\n3:\n", c4.make_order(13))
+    print("\n4:\n", c5.make_order(5))
 
   
-  # matrix_test()
-  # clothes_test()
+  matrix_test()
+  clothes_test()
   cell_test()
 
 run()
