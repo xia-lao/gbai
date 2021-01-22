@@ -158,11 +158,11 @@ def run():
     # c2 = c0 - c1 #raises as should
     c3 = c0 + c1
     c4 = c0 * c1
-    c5 = c0 / c1
+    c5 = c4 / c1
 
     print("\n\t2:\n", c3.make_order(6))
-    print("\n\t3:\n", c4.make_order(6))
-    print("\n\t4:\n", c5.make_order(6))
+    print("\n\t3:\n", c4.make_order(13))
+    print("\n\t4:\n", c5.make_order(5))
 
   
   # matrix_test()
