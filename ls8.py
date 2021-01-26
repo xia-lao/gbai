@@ -324,9 +324,10 @@ def mycomp_test():
   print(m0 * m1)
 
 def run()
-  bie_test()
-  exc_test()
   date_test()
+  exc_test()
+  bie_test()
+  task_6()
   mycomp_test()
 
 run()
